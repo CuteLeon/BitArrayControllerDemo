@@ -2,6 +2,8 @@
 
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '笔记：通过断点，在"自动窗口"看到 BitArray 内部使用 Integer 储存比特，32位一组
+
         '创建 0~255 的 Byte 数组
         Dim BitsLength As Integer = Marshal.SizeOf(Of Byte) * 8
         Dim ByteList(2 ^ BitsLength - 1) As Byte
