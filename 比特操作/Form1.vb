@@ -16,6 +16,8 @@ Public Class Form1
         Dim BitArray As BitArray = New BitArray(ByteList)
         Debug.Print("从 Byte() 数组创建比特数组.")
 
+        Debug.Print("比特数组托管内存地址：" & GCHandle.ToIntPtr(GCHandle.Alloc(BitArray)).ToString())
+
         '输出比特数组
         Debug.Print("开始输出比特数组.")
         PrintBitArray(BitArray, BitsLength)
